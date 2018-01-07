@@ -12,13 +12,13 @@ This replaces the original Arduino powered aquarium controller and has the follo
 
 # Installation
 Follow these instructions on the command line on your raspberry pi.
-## Install node:
+## Install node
   ```
   curl -sLS https://apt.adafruit.com/add | sudo bash
   sudo apt-get install node
   sudo reboot
   ```
-## Install pi-blaster.
+## Install pi-blaster
 **pi-blaster** is an open source project that allows very efficient PWM (pulse width modulation) of GPIO pins on the raspberry pi. This allows us to do things like dim the LED lights, rather than just turn them off or on.
 - Clone the repo
   ```
@@ -29,7 +29,7 @@ Follow these instructions on the command line on your raspberry pi.
   ```
   sudo chown -R pi:pi pi-blaster
   ```
-- Build and install **pi-blaster**: 
+- Build and install **pi-blaster**:
   ```
   sudo apt-get install autoconf
   cd /opt/pi-blaster

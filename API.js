@@ -1,8 +1,9 @@
 var http = require('http');
 var express = require('express');
-var piblaster = require('pi-blaster.js');
+var piblaster = require('pi-blaster.0.1.3.js');
 
 var app = express();
+
 // ------------------------------------------------------------------------
 // configure Express to serve index.html and any other static pages stored
 // in the home directory

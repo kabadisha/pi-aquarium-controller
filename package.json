@@ -18,6 +18,7 @@
   "homepage": "https://github.com/kabadisha/pi-aquarium-controller#readme",
   "dependencies": {
     "connect": "^3.6.5",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "pi-blaster.js": "^0.1.1"
   }
 }

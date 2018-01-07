@@ -7,7 +7,7 @@ var app = express();
 // ------------------------------------------------------------------------
 // configure Express to serve index.html and any other static pages stored
 // in the home directory
-app.use(express.static(__dirname));
+app.use(express.static('public'));
 
 //lights on rest get call
 app.get('/lightsOn', function(req, res) {

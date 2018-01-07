@@ -29,7 +29,7 @@ Follow these instructions on the command line on your raspberry pi.
   ```
   sudo chown -R pi:pi pi-blaster
   ```
-- Build and install **pi-blaster**:
+- Build and install **pi-blaster**: 
   ```
   sudo apt-get install autoconf
   cd /opt/pi-blaster

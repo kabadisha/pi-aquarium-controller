@@ -1,0 +1,23 @@
+{
+  "name": "pi-aquarium-controller",
+  "version": "1.0.0",
+  "description": "An aquarium controller using the raspberry pi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kabadisha@github.com/kabadisha/pi-aquarium-controller.git"
+  },
+  "author": "Charles Wilkinson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kabadisha/pi-aquarium-controller/issues"
+  },
+  "homepage": "https://github.com/kabadisha/pi-aquarium-controller#readme",
+  "dependencies": {
+    "connect": "^3.6.5",
+    "express": "^4.16.2"
+  }
+}

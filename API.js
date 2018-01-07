@@ -1,6 +1,6 @@
 var http = require('http');
 var express = require('express');
-var piblaster = require('pi-blaster.0.1.3.js');
+var piblaster = require('./pi-blaster.0.1.3.js');
 
 var app = express();
 
@@ -11,28 +11,35 @@ app.use(express.static(__dirname));
 
 //lights on rest get call
 app.get('/lightsOn', function(req, res) {
-      piblaster.setPwm(22, 1);
-      res.end('Lights On');
+  piblaster.setPwm(22, 1);
+  res.end('Lights On');
 });
 
 //lights off rest get call
 app.get('/lightsOff', function(req, res) {
-       piblaster.setPwm(22, 0);
-       res.end('Lights Off');
+  piblaster.setPwm(22, 0);
+  res.end('Lights Off');
+});
+
+//lights on rest get call
+app.get('/brightness', function(req, res) {
+  var brightness = req.query.brightness;
+  piblaster.setPwm(22, brightness);
+  res.end('Lights On');
 });
 
 // Express route for any other unrecognised incoming requests
 app.get('*', function (req, res) {
-       res.status(404).send('Unrecognised API call');
+  res.status(404).send('Unrecognised API call');
 });
 
 // Express route to handle errors
 app.use(function (err, req, res, next) {
- if (req.xhr) {
-       res.status(500).send('Oops, Something went wrong!');
- } else {
-       next(err);
- }
+  if (req.xhr) {
+    res.status(500).send('Oops, Something went wrong!');
+  } else {
+    next(err);
+  }
 }); // apt.use()
 
 

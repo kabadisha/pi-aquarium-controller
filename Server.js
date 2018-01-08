@@ -16,13 +16,13 @@ var lightsPWMpin = 22;
 app.use(express.static('public'));
 
 //lights on rest get call
-app.post('/lightsOn', function(req, res) {
+app.get('/lightsOn', function(req, res) {
   piblaster.setPwm(lightsPWMpin, 1);
   res.end('Lights On');
 });
 
 //lights off rest get call
-app.post('/lightsOff', function(req, res) {
+app.get('/lightsOff', function(req, res) {
   piblaster.setPwm(lightsPWMpin, 0);
   res.end('Lights Off');
 });

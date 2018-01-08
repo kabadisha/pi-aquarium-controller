@@ -25,7 +25,7 @@
     <div class="slidecontainer">
       <input type="range" min="0" max="1000" value="0" class="slider" id="brightnessSlider">
       <br />
-      <p>Brightness: <span id="brightnessValue"></span></p>
+      <p>Brightness: <span id="brightnessText"></span></p>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -36,12 +36,12 @@
 
     <script>
       var brightnessSlider = document.getElementById("brightnessSlider");
-      var brightnessValue = document.getElementById("brightnessValue");
-      brightnessValue.innerHTML = brightnessSlider.value/1000;
+      var brightnessText = document.getElementById("brightnessText");
+      brightnessText.innerHTML = brightnessSlider.value/1000;
 
       brightnessSlider.oninput = function() {
         var brightnessValue = this.value/1000;
-        brightnessValue.innerHTML = brightnessValue;
+        brightnessText.innerHTML = brightnessValue;
 
         $.post("/setBrightness",
         {

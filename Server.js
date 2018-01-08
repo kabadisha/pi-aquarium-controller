@@ -1,35 +1,45 @@
 var http = require('http');
 var express = require('express');
+var bodyParser = require("body-parser");
 var piblaster = require('./pi-blaster.0.1.3.js');
 
 var app = express();
+//Here we are configuring express to use body-parser as middle-ware.
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+var lightsPWMpin = 22;
 
 // ------------------------------------------------------------------------
-// configure Express to serve index.html and any other static pages stored
-// in the home directory
+// configure Express to serve index.html and any other static files stored
+// in the public directory
 app.use(express.static('public'));
 
 //lights on rest get call
-app.get('/lightsOn', function(req, res) {
-  piblaster.setPwm(22, 1);
+app.post('/lightsOn', function(req, res) {
+  piblaster.setPwm(lightsPWMpin, 1);
   res.end('Lights On');
 });
 
 //lights off rest get call
-app.get('/lightsOff', function(req, res) {
-  piblaster.setPwm(22, 0);
+app.post('/lightsOff', function(req, res) {
+  piblaster.setPwm(lightsPWMpin, 0);
   res.end('Lights Off');
 });
 
 //lights on rest get call
-app.get('/brightness', function(req, res) {
-  var brightness = req.query.brightness;
-  piblaster.setPwm(22, brightness);
-  res.end('Lights On');
+app.post('/setBrightness', function(req, res) {
+  var brightness = req.body.brightness;
+  piblaster.setPwm(lightsPWMpin, brightness);
+  res.end('Brightness set to: ' + brightness);
 });
 
 // Express route for any other unrecognised incoming requests
 app.get('*', function (req, res) {
+  res.status(404).send('Unrecognised API call');
+});
+
+app.post('*', function (req, res) {
   res.status(404).send('Unrecognised API call');
 });
 
@@ -40,7 +50,7 @@ app.use(function (err, req, res, next) {
   } else {
     next(err);
   }
-}); // apt.use()
+});
 
 
 //------------------------------------------------------------------------

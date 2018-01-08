@@ -39,7 +39,7 @@
       var brightnessValue = document.getElementById("brightnessValue");
       brightnessValue.innerHTML = brightnessSlider.value/1000;
 
-      brightnessSlider.onchange = function() {
+      brightnessSlider.oninput = function() {
         var brightnessValue = this.value/1000;
         brightnessValue.innerHTML = brightnessValue;
 

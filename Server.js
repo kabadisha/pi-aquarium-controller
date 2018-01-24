@@ -1,7 +1,7 @@
 var http = require('http');
 var express = require('express');
-var bodyParser = require("body-parser");
-var piblaster = require('./pi-blaster.0.1.3.js');
+var bodyParser = require('body-parser');
+var piblaster = require('pi-blaster.js');
 
 var app = express();
 //Here we are configuring express to use body-parser as middle-ware.

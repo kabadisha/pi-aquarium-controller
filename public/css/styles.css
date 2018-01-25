@@ -1,37 +1,34 @@
-.slidecontainer {
-    width: 100%;
+body {
+  font-size: 2em;
+}
+
+header {
+  color: #bbe4fd;
+  padding-bottom: 20px;
+}
+
+.label {
+    font-size: 1.3em;
+}
+
+.slider-container {
+  padding: 0 20px;
 }
 
 .slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 10px;
-    border-radius: 5px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+  position: relative;
+  top: 6px;
 }
 
-.slider:hover {
-    opacity: 1;
+.slider-before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 23px;
-    height: 24px;
-    border: 0;
-    background: url('/images/contrasticon.png');
-    cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-    width: 23px;
-    height: 24px;
-    border: 0;
-    background: url('/images/contrasticon.png');
-    cursor: pointer;
+.slider-after {
+  position: absolute;
+  right: 0px;
+  color: #C9B559;
+  top: 0px;
 }

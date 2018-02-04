@@ -16,6 +16,8 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-toggle@2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="/css/styles.css">
     <script>
       FontAwesomeConfig = { searchPseudoElements: true };
@@ -29,20 +31,20 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">Lighting</h3>
+              <strong>Lighting</strong>
             </div>
             <div class="panel-body">
               <div class="container-fluid">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <p class="text-left label">
+                <div class="row vertical-center">
+                  <div class="col-md-6">
+                    <span class="text-left label">
                       Brightness: <span id="brightnessText"></span>
-                    </p>
+                    </span>
                   </div>
-                  <div class="col-sm-6">
+                  <div class="col-md-6 text-center">
                     <div class="slider-container">
                       <i class="far fa-lightbulb fa-lg slider-before"></i>
                       <input id="brightnessSlider" class="slider" type="range" min="0" max="1000" step="1" value="0" />
@@ -54,42 +56,42 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">Air</h3>
+              <strong>Air</strong>
             </div>
             <div class="panel-body">
               <div class="container-fluid">
-                <div class="row">
+                <div class="row vertical-center">
                   <div class="col-sm-6">
-                    <p class="text-left label">
+                    <span class="text-left label">
                       Status:
-                    </p>
+                    </span>
                   </div>
-                  <div class="col-sm-6">
-                    On/Off
+                  <div class="col-sm-6 text-center">
+                    <input type="checkbox" data-toggle="toggle" data-onstyle="info" data-size="large">
                   </div>
                 </div>
       				</div>
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">CO2</h3>
+              <strong>CO2</strong>
             </div>
             <div class="panel-body">
               <div class="container-fluid">
-                <div class="row">
+                <div class="row vertical-center">
                   <div class="col-sm-6">
-                    <p class="text-left label">
+                    <span class="text-left label">
                       Status:
-                    </p>
+                    </span>
                   </div>
-                  <div class="col-sm-6">
-                    On/Off
+                  <div class="col-sm-6 text-center">
+                    <input type="checkbox" data-toggle="toggle" data-onstyle="info" data-size="large">
                   </div>
                 </div>
       				</div>
@@ -104,6 +106,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-toggle@2.2.2/js/bootstrap-toggle.min.js"></script>
 
     <script>
       var brightnessSlider = document.getElementById("brightnessSlider");

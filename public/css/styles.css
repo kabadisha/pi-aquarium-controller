@@ -1,5 +1,5 @@
 body {
-  font-size: 2em;
+
 }
 
 header {
@@ -7,8 +7,12 @@ header {
   padding-bottom: 20px;
 }
 
+.panel-heading {
+  font-size: 2em;
+}
+
 .label {
-    font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 .slider-container {
@@ -31,4 +35,9 @@ header {
   right: 0px;
   color: #C9B559;
   top: 0px;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
 }

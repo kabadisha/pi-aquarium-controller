@@ -1,3 +1,8 @@
+---
+**:warning: WARNING**
+This project is in development and doesnt actually do a lot at the moment
+---
+
 # pi-aquarium-controller
 A raspberry pi powered aquarium controller. Monitors temperature and controls lights, air and CO2.
 
